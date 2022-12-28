@@ -1,5 +1,5 @@
 import { collection, getDocs } from "firebase/firestore";
-import { call, put, takeLatest } from "redux-saga/effects";
+import { call, put, takeLatest, all } from "redux-saga/effects";
 import {
 	convertCollectionsSnapshotToMap,
 	db,
@@ -26,4 +26,8 @@ export function* fetchCollectionsAsync() {
 
 export function* fetchCollectionsStart() {
 	yield takeLatest("FETCH_COLLECTIONS_START", fetchCollectionsAsync);
+}
+
+export function* shopSagas() {
+	yield all([call(fetchCollectionsStart)]);
 }
