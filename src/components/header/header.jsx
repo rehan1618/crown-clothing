@@ -30,9 +30,9 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
 				<OptionLink className="option" to="/shop">
 					SHOP
 				</OptionLink>
-				<OptionLink className="option" to="/contact">
+				{/* <OptionLink className="option" to="/contact">
 					CONTACT
-				</OptionLink>
+				</OptionLink> */}
 				{currentUser ? (
 					<OptionLink as="div" onClick={signOutStart}>
 						SIGN OUT
