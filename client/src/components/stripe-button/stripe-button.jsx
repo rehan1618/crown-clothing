@@ -9,7 +9,7 @@ const StripeCheckoutButton = ({ price }) => {
 
 	const onToken = token => {
 		axios({
-			url: "payment",
+			url: "http://localhost:5000/payment",
 			method: "post",
 			data: {
 				amount: priceForStripe,
@@ -21,7 +21,7 @@ const StripeCheckoutButton = ({ price }) => {
 				alert("Payment Successful");
 			})
 			.catch(error => {
-				console.log("Payment Error", JSON.parse(error));
+				console.log("Payment Error", error);
 				alert("There was an issue with your payment");
 			});
 	};
