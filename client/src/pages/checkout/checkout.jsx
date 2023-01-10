@@ -42,6 +42,7 @@ const Checkout = ({ cartItems, total }) => {
 				<br />
 				4242 4242 4242 4242 - EXP: 12/34 - CVV: 123
 			</div>
+
 			<StripeCheckoutButton price={total} />
 		</div>
 	);
