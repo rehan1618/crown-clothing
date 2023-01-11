@@ -13,7 +13,7 @@
 		"start": "node server.js",
 		"heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
 		"pack": "npm i && cd client && npm i && npm run dev",
-		"vercel-build": "npm i && cd client && npm i && npm run build"
+		"vercel-build": "npm i && cd client && npm i && npm run build && cd .. && npm start"
 	},
 	"dependencies": {
 		"body-parser": "^1.18.3",
