@@ -22,6 +22,10 @@ if (process.env.NODE_ENV === "production") {
 	});
 }
 
+app.get("/render-server-test", (req, res) => {
+	res.status(200).send();
+});
+
 app.post("/payment", async (req, res) => {
 	const paymentIntent = await stripe.paymentIntents.create({
 		amount: req.body.amount,
