@@ -2,7 +2,7 @@
 	"name": "crwn-clothing-server",
 	"version": "1.0.0",
 	"engines": {
-		"node": "18.13.0",
+		"node": "19.2.0",
 		"npm": "8.19.3"
 	},
 	"scripts": {
@@ -12,8 +12,7 @@
 		"dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
 		"start": "node server.js",
 		"heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
-		"pack": "npm i && cd client && npm i && npm run dev",
-		"vercel-build": "npm i && cd client && npm i && npm run build && cd .. && npm start"
+		"pack": "npm i && cd client && npm i && npm run dev"
 	},
 	"dependencies": {
 		"body-parser": "^1.18.3",
